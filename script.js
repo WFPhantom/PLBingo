@@ -138,8 +138,8 @@ function generateBingoGrid() {
             square.classList.add('bingo-square');
             if (row === 2 && col === 2) {
                 const img = document.createElement('img');
-                img.src = 'PLLOGO.png';
-                img.alt = 'PLLOGO';
+                img.src = 'PLLOGO.jpg';
+                img.alt = 'pllogo';
                 square.appendChild(img);
                 square.style.cursor = 'default';
                 square.innerHTML += '<span class="free-text">FREE</span>';
