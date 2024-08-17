@@ -57,13 +57,13 @@ function saveBingoGrid() {
             clicked: square.classList.contains('clicked')
         });
     });
-    localStorage.setItem('bingoGrid', JSON.stringify(gridState));
-    localStorage.setItem('bingoSeed', document.getElementById('current-seed').textContent);
+    localStorage.setItem('bingoGridPL', JSON.stringify(gridState));
+    localStorage.setItem('bingoSeedPL', document.getElementById('current-seed').textContent);
 }
 
 function loadBingoGrid() {
-    const savedGrid = localStorage.getItem('bingoGrid');
-    const savedSeed = localStorage.getItem('bingoSeed');
+    const savedGrid = localStorage.getItem('bingoGridPL');
+    const savedSeed = localStorage.getItem('bingoSeedPL');
     if (savedGrid && savedSeed) {
         document.getElementById('current-seed').textContent = savedSeed;
         const gridState = JSON.parse(savedGrid);
@@ -83,7 +83,7 @@ function loadBingoGrid() {
             square.classList.add('bingo-square');
             if (index === 12) {
                 const img = document.createElement('img');
-                img.src = 'PLLOGO.png';
+                img.src = 'PLLOGO.jpg';
                 img.alt = 'pllogo';
                 square.appendChild(img);
                 square.style.cursor = 'default';
